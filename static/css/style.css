@@ -1,1 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080510;
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(circle at 20% 20%, #5e1b55 0%, transparent 35%),
+        radial-gradient(circle at 80% 30%, #3c176b 0%, transparent 35%),
+        radial-gradient(circle at 50% 100%, #19105b 0%, transparent 40%),
+        #080510;
+}
+
+.hero-content {
+    max-width: 900px;
+    animation: fadeUp 1.5s ease;
+}
+
+.small-title {
+    color: #ff9bdc;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+    background: linear-gradient(90deg, #ff65c7, #ffb3e6, #a879ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #d8cee3;
+    margin-bottom: 40px;
+}
+
+.surprise-btn,
+.final-content button {
+    border: none;
+    padding: 17px 32px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff4db8, #8d5cff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 35px rgba(255, 65, 190, 0.35);
+    transition: 0.3s;
+}
+
+.surprise-btn:hover,
+.final-content button:hover {
+    transform: translateY(-5px) scale(1.04);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #b9aeca;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.message-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #080510, #11091b);
+}
+
+.message-card {
+    width: min(800px, 100%);
+    padding: 65px 45px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+}
+
+.cake {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.message-card h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.message-card p {
+    color: #cfc3da;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+.message-card .special-message {
+    color: #ffb3e6;
+    font-size: 21px;
+}
+
+.signature {
+    margin-top: 30px;
+    color: #ff78c9;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.gallery-section {
+    padding: 120px 6%;
+    background: #0c0714;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-heading > p:first-child {
+    color: #ff7acb;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(40px, 6vw, 65px);
+}
+
+.section-heading h2 span {
+    color: #ff6ac5;
+}
+
+.line {
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff4db8, #9c67ff);
+    margin: 25px auto;
+    border-radius: 20px;
+}
+
+.gallery-subtitle {
+    color: #9f93ad;
+}
+
+.gallery {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #15101e;
+    min-height: 350px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+.photo-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.photo-card:hover .photo-overlay {
+    opacity: 1;
+}
+
+.final-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at center, #35135c, #080510 65%);
+}
+
+.final-content {
+    max-width: 900px;
+}
+
+.big-heart {
+    font-size: 70px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-content h2 {
+    font-size: 25px;
+    color: #bcaecb;
+    margin: 20px 0;
+}
+
+.final-content h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.final-content h1 span {
+    color: #ff70c8;
+}
+
+.final-content p {
+    color: #c8bdd0;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background: #050309;
+    color: #a99db0;
+}
+
+.footer-small {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #62596a;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+@media (max-width: 800px) {
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .message-card {
+        padding: 45px 25px;
+    }
+
+    .message-card h2 {
+        font-size: 32px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .small-title {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .final-content h1 {
+        font-size: 45px;
+    }
+}
