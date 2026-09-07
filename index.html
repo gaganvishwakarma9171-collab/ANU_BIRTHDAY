@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ANU BIRTHDAY 🎂</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                A SPECIAL DAY FOR A SPECIAL PERSON ✨
+            </p>
+
+            <h1>
+                Happy Birthday
+                <span>Anu</span> 🎂
+            </h1>
+
+            <p class="hero-text">
+
+                Today isn't just another day...
+
+                <br>
+
+                It's the day someone truly special was born. ❤️
+
+            </p>
+
+            <button class="surprise-btn"
+                    onclick="openSurprise()">
+
+                🎁 Open Your Surprise
+
+            </button>
+
+        </div>
+
+
+        <div class="scroll-down">
+
+            ↓ Scroll Down ↓
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MESSAGE -->
+
+    <section class="message-section"
+             id="message">
+
+        <div class="message-card">
+
+            <div class="cake">
+                🎂
+            </div>
+
+            <h2>
+                For You, Anu ❤️
+            </h2>
+
+            <p>
+                On your special day,
+                I just want to say...
+            </p>
+
+            <p class="special-message">
+
+                May your life always be filled with
+                happiness, beautiful memories,
+                endless smiles and people who truly
+                care about you. ✨
+
+            </p>
+
+            <p>
+
+                Keep smiling, keep shining and keep
+                being the amazing person you are. 🌸
+
+            </p>
+
+            <div class="signature">
+
+                — With lots of love ❤️
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PHOTO GALLERY -->
+
+    <section class="gallery-section">
+
+        <div class="section-heading">
+
+            <p>
+                ANU'S MEMORIES 📸
+            </p>
+
+            <h2>
+
+                Beautiful
+                <span>Moments</span>
+
+            </h2>
+
+            <div class="line"></div>
+
+            <p class="gallery-subtitle">
+
+                Some memories are too beautiful
+                to be forgotten. ❤️
+
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu1.jpg') }}">
+
+                <div class="photo-overlay">
+                    ✨ Beautiful Moment
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu2.jpg') }}">
+
+                <div class="photo-overlay">
+                    🌸 Beautiful Smile
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu3.jpg') }}">
+
+                <div class="photo-overlay">
+                    ❤️ Special Memory
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu4.jpg') }}">
+
+                <div class="photo-overlay">
+                    🥰 Together
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu5.jpg') }}">
+
+                <div class="photo-overlay">
+                    ✨ Perfect Moment
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu6.jpg') }}">
+
+                <div class="photo-overlay">
+                    💫 Beautiful Day
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu7.jpg') }}">
+
+                <div class="photo-overlay">
+                    🌷 Precious Memory
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu8.jpg') }}">
+
+                <div class="photo-overlay">
+                    💖 Sweet Moment
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu9.jpg') }}">
+
+                <div class="photo-overlay">
+                    🌟 Amazing Memory
+                </div>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="{{ url_for('static', filename='photos/anu10.jpg') }}">
+
+                <div class="photo-overlay">
+                    ❤️ Forever Memory
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FINAL -->
+
+    <section class="final-section">
+
+        <div class="final-content">
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+            <h2>
+                Once Again...
+            </h2>
+
+            <h1>
+
+                HAPPY BIRTHDAY
+
+                <span>
+                    ANU
+                </span>
+
+                🎂
+
+            </h1>
+
+            <p>
+
+                May this new year of your life bring you
+                everything your heart wishes for.
+
+            </p>
+
+            <button onclick="createConfetti()">
+
+                🎉 Celebrate!
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Made with ❤️ specially for Anu
+        </p>
+
+        <p class="footer-small">
+            ANU BIRTHDAY © 2026
+        </p>
+
+    </footer>
+
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}">
+    </script>
+
+
+</body>
+
+</html>
